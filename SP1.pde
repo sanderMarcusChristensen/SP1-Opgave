@@ -10,9 +10,6 @@ Ball[] myBalls = new Ball[100]; // Array 2
 
 ArrayList <Ellipse> myEllipseList = new ArrayList<>();
 
-Ellipse ellipse = new Ellipse(width/2, height/2, sizeOne, sizeToo);
-
- 
 
 
 
