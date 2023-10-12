@@ -16,7 +16,7 @@ class Ellipse
   }
 
 
-  void explosion()
+  void display()
   {
   if(sizeOne >= 10 || sizeToo >= 10)
     {

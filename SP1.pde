@@ -1,6 +1,4 @@
 
-
-
 int sizeOne = 10;
 int sizeToo = 10; 
 
@@ -9,6 +7,8 @@ int sizeToo = 10;
 Ball[] myBall = new Ball[100]; // Array 1 
 
 Ball[] myBalls = new Ball[100]; // Array 2
+
+ArrayList <Ellipse> myEllipseList = new ArrayList<>();
 
 Ellipse ellipse = new Ellipse(width/2, height/2, sizeOne, sizeToo);
 
@@ -46,7 +46,11 @@ void setup()
 void draw()
 {
   background(255);
-  ellipse.explosion();
+  
+  for(Ellipse ellipse: myEllipseList)
+  {
+    ellipse.display();
+  }
   
   
   for(Ball ballList1 : myBall) //ArrayList 1
@@ -68,14 +72,7 @@ void draw()
 
 void mousePressed()
 {
-   if(mousePressed)
-   {
-    sizeOne += 5;
-    sizeToo += 5; 
-    fill(255);
-    stroke(255,0,0);
-    //ellipse(width/2, height/2, sizeOne, sizeToo);
-   }
-   ellipse(width/2, height/2, sizeOne, sizeToo);
+  Ellipse ellipse = new Ellipse(width/2, height/2, sizeOne, sizeToo);
+  myEllipseList.add(ellipse);
 
 }
