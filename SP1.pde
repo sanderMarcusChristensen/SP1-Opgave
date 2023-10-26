@@ -23,14 +23,14 @@ void setup()
 
 
 
-  for(int i = 0; i < myBall.length; i++) // ArrayList 1
+  for(int i = 0; i < myBall.length; i++) // Array 1
   {
     float x = width/2;
     float y = height;
     myBall[i] = new Ball(x,y -20 *i);
   }
 
-  for(int i = 0; i < myBalls.length; i++) // ArrayList 2 
+  for(int i = 0; i < myBalls.length; i++) // Array 2 
   {
     float x = width;
     float y = height/2;
@@ -50,14 +50,14 @@ void draw()
   }
   
   
-  for(Ball ballList1 : myBall) //ArrayList 1
+  for(Ball ballList1 : myBall) //Array 1
   {
     ballList1.display();
   }
   
   
   
-  for(Ball ballList2 : myBalls) //ArrayList 2
+  for(Ball ballList2 : myBalls) //Array 2
   {
     ballList2.display();
   }
@@ -70,6 +70,7 @@ void draw()
 void mousePressed()
 {
   Ellipse ellipse = new Ellipse(width/2, height/2, sizeOne, sizeToo);
+  
   myEllipseList.add(ellipse);
 
 }
